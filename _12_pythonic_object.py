@@ -153,4 +153,4 @@ def example_with_slots_attribute():
 
 
 if __name__ == "__main__":
-    example_with_slots_attribute()
+    example_with_private_property()
