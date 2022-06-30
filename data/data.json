@@ -1,0 +1,24 @@
+{
+  "table": "user",
+  "fields": {
+    "id": 1,
+    "name": "John Snow",
+    "roles": [
+      {
+        "id": 1,
+        "name": "Project Manager"
+      },
+      {
+        "id": 2,
+        "name": "Developer"
+      }
+    ],
+    "address": {
+      "country": "Uzbekistan",
+      "city": "Tashkent",
+      "house": 7,
+      "tags": ["Uzb", "Tash"]
+    },
+    "phone_numbers": ["+998901234567", "+99890239845"]
+  }
+}
