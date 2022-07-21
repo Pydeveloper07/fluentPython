@@ -190,4 +190,4 @@ def example_with_thread_pool_executor():
 
 
 if __name__ == "__main__":
-    example_with_thread_pool_executor()
+    example_with_concurrent_download()
