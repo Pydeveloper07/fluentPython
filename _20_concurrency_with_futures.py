@@ -1,5 +1,8 @@
 import random
+import time
+import sys
 
+# sys.setswitchinterval(100000000)
 
 def example_with_sequential_download():
     import os
@@ -189,5 +192,21 @@ def example_with_thread_pool_executor():
     encrypt_with_threading()
 
 
+def main(num):
+    start = time.time()
+    print(f"start worker {num}")
+    print(sum(range(200000000)))
+    print(f"end worker {num}")
+    print(time.time() - start)
+
+
 if __name__ == "__main__":
-    example_with_concurrent_download()
+    from concurrent import futures
+
+    executor = futures.ProcessPoolExecutor(max_workers=5)
+    executor.submit(main, 1)
+    executor.submit(main, 2)
+    executor.submit(main, 3)
+    executor.submit(main, 4)
+    executor.submit(main, 5)
+
