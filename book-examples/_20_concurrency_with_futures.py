@@ -193,6 +193,8 @@ def example_with_thread_pool_executor():
 
 
 def main(num):
+    if num == 1:
+        time.sleep(5)
     start = time.time()
     print(f"start worker {num}")
     print(sum(range(200000000)))
